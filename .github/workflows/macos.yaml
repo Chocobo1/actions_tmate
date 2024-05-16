@@ -1,0 +1,14 @@
+name: macOS
+on: [workflow_dispatch]
+permissions: {}
+
+jobs:
+  macos:
+    name: macOS
+    runs-on: macos-latest
+    steps:
+      - name: Setup remote login (tmate)
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 60
+        with:
+          detached: true

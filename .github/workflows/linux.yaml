@@ -1,0 +1,14 @@
+name: Linux
+on: [workflow_dispatch]
+permissions: {}
+
+jobs:
+  ubuntu:
+    name: Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup remote login (tmate)
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 60
+        with:
+          detached: true
